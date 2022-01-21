@@ -102,7 +102,6 @@ class StocksGraph extends React.Component {
           values={this.props.values}
           stocks={this.props.stocks}
         >
-
         </Model>
       </div>
     );
