@@ -12,7 +12,7 @@ const StocksLoaderStatus = props => {
     return (
       <div className='tag is-large is-success'>
         <span className='loader'> &nbsp;</span>
-        &nbsp; &nbsp; Fetching some stocks...
+        &nbsp; &nbsp; Generando algunos valores...
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import {Line} from 'react-chartjs-2';
 import * as zoom from 'chartjs-plugin-zoom'
 import { chartJsConfig, chartColors, chartDataset } from '../chartConfig.js'
+import Model from './Model.jsx';
 
 class StocksGraph extends React.Component {
 
@@ -75,23 +76,31 @@ class StocksGraph extends React.Component {
       <div className={'card column'} >
         <div className='card-header'>
           <div className='card-header-title'>
-            Graph
+            Grafico
           </div>
         </div>
         <div className='card-content'>
           <p className='is-size-7 has-text-info'>
             {
               this.refs.chart &&
-              this.refs.chart.chartInstance.data.datasets.length > 0 ? 'Scroll/pinch to zoom, drag to pan.' : 'Click on any stocks on your left to see graphs.'
+              this.refs.chart.chartInstance.data.datasets.length > 0 ? 'Usar el zoom con la rueda del raton.' : 'Selecciona un valor para ver su grafica.'
             }
           </p>
-          <button className="button is-small is-pulled-right" onClick={this.resetZoom}>Reset zoom</button>
+          <button className="button is-small is-pulled-right" onClick={this.resetZoom}>Actualizar zoom</button>
           <Line
             data={{datasets: []}}
             options={chartJsConfig}
             ref='chart'
           />
-        </div> 
+        </div>
+        <div className='card-header'>
+          <div className='card-header-title'>
+            Reporte Predictivo
+          </div>
+        </div>
+        <Model>
+
+        </Model>
       </div>
     );
   }

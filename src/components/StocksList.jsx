@@ -8,7 +8,7 @@ const StocksList = (props) => {
     <div className='card column is-one-third' id='stocks_list'>
       <div className='card-header'>
         <div className='card-header-title'>
-          Stocks
+          Bolsa de Valores
           &nbsp;
           <Detector
             render={({ online }) => (
@@ -18,21 +18,21 @@ const StocksList = (props) => {
             )}
           />
           &nbsp;
-          <button className='button is-small' onClick={props.resetData}>Clear history</button>
+          {/* <button className='button is-small' onClick={props.resetData}>Clear history</button> */}
         </div>
       </div>
       <div className='card-content'>
-        { props.areStocksLoaded() ? <p className='is-size-7 has-text-info'>Click on a stock to select/unselect</p> : null }
+        { props.areStocksLoaded() ? <p className='is-size-7 has-text-info'>Clic a un valor para seleccionarlo</p> : null }
         <table className='table is-bordered'>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Nombre</th>
               <th>
-                Value
-                <MarketTrendArrow current_trend={props.market_trend} />
+                Valor
+                {/* <MarketTrendArrow current_trend={props.market_trend} /> */}
               </th>
-              <th>History</th>
-              <th>Updated At</th>
+              <th>Historia</th>
+              {/* <th>Subido en</th> */}
             </tr>
           </thead>
           <tbody>

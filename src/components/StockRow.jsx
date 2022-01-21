@@ -29,9 +29,9 @@ class StockRow extends React.Component {
             <SparklinesLine color="blue" />
           </Sparklines>
         </td>
-        <td className='updated_at'>
+        {/* <td className='updated_at'>
           <TimeAgo date={ history.slice(-1)[0].time } />
-        </td>
+        </td> */}
       </tr>
     );
   }
