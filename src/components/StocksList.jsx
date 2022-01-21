@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Detector } from "react-detect-offline";
 import StockRow from './StockRow.jsx'
 import MarketTrendArrow from './MarketTrendArrow.jsx'
 
 const StocksList = (props) => {
+
+  //const [values,setValues] = useState([])
+
   return (
     <div className='card column is-one-third' id='stocks_list'>
       <div className='card-header'>
@@ -39,6 +42,7 @@ const StocksList = (props) => {
             {Object.keys(props.stocks).map((stock_name, index) =>
               {
                 let current_stock = props.stocks[stock_name];
+                //setValues(prev=>prev.concat(current_stock.current_value))
                 return (
                   <StockRow
                     key={index} stock_name={stock_name}
@@ -51,6 +55,7 @@ const StocksList = (props) => {
             { props.areStocksLoaded() ? null : <tr><td colSpan='4'>No stocks loaded yet!</td></tr> }
           </tbody>
         </table>
+        <button onClick={()=>console.log("touhou")}></button>
        </div>
     </div>
   );

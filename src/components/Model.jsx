@@ -32,14 +32,6 @@ class Model extends React.Component {
                         <p className="is-size-8">Precio pronosticado:</p>
                     </div>
                 </div>
-                <hr/>
-                <div>
-                    <strong><p className="is-size-10">Modelo LSTM:</p></strong>
-                    <br/>
-                    <div>
-                        <p className="is-size-8">Precio pronosticado:</p>
-                    </div>
-                </div>
             </div>
         )
     }
