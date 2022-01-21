@@ -68,3 +68,7 @@ td.updated_at{
   border-radius: 5px;
   font-size: 20px;
 }
+.card-content.model {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

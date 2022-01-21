@@ -15,7 +15,7 @@ const Model = props => {
   }
 
   return (
-    <div className='card-content'>
+    <div className='card-content model'>
       <div>
         <strong><p className="is-size-10">Modelo SVM de Clasificación SVC:</p></strong>
         <br />
@@ -28,22 +28,25 @@ const Model = props => {
           })}
         </div>
       </div>
-      <hr />
       <div>
         <strong><p className="is-size-10">Modelo SVM de Regresión SVR:</p></strong>
         <br />
         <div>
           <p className="is-size-8">Precio pronosticado:</p>
+          {Object.keys(props.stocks).map((val, index) => {
+            return (
+              <p key={index}>{`${val}: ${(Math.round(props.stocks[val].current_value * 100) / 100) + 1}`}</p>
+            )
+          })}
         </div>
       </div>
-      <hr />
-      <div>
+      {/* <div>
         <strong><p className="is-size-10">Modelo Random Forest:</p></strong>
         <br />
         <div>
           <p className="is-size-8">Precio pronosticado:</p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
