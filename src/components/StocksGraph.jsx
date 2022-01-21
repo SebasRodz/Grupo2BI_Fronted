@@ -98,7 +98,10 @@ class StocksGraph extends React.Component {
             Reporte Predictivo
           </div>
         </div>
-        <Model>
+        <Model
+          values={this.props.values}
+          stocks={this.props.stocks}
+        >
 
         </Model>
       </div>
